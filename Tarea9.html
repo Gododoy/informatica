@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calcular Días para Evento</title>
+</head>
+<body>
+  <form onsubmit="calcular(event)">
+    Evento: <input type="text" id="evento"><br>
+    Fecha: <input type="date" id="fecha"><br>
+    <button type="submit">Calcular</button>
+  </form>
+  <p id="resultado"></p>
+
+  <script>
+    function calcular(e) {
+      e.preventDefault();
+      let nombre = document.getElementById("evento").value;
+      let fechaEvento = new Date(document.getElementById("fecha").value);
+      let hoy = new Date();
+      let diferencia = Math.ceil((fechaEvento - hoy) / (1000 * 60 * 60 * 24));
+      if (diferencia > 0) {
+        document.getElementById("resultado").textContent = "Faltan " + diferencia + " días para " + nombre + ".";
+      } else {
+        document.getElementById("resultado").textContent = "El evento '" + nombre + "' ya ocurrió.";
+      }
+    }
+  </script>
+</body>
+</html>

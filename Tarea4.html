@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Verificar Edad</title>
+  <title>Juego de Adivinanza</title>
 </head>
 <body>
-  <button onclick="verificarEdad()">Verificar edad</button>
+  <button onclick="jugar()">Jugar</button>
 
   <script>
-    function verificarEdad() {
-      let edad = prompt("Ingrese su edad:");
-      edad = Number(edad);
-      if (edad >= 18) {
-        alert("Acceso permitido");
+    function jugar() {
+      const secreto = 7;
+      let intento = prompt("Adivina el número secreto:");
+      if (Number(intento) === secreto) {
+        alert("¡Acertaste!");
       } else {
-        alert("Acceso denegado");
+        alert("No acertaste. El número era " + secreto);
       }
     }
   </script>

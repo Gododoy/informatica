@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asistencia a la fiesta</title>
+</head>
+<body>
+  <form id="formulario">
+    Nombre: <input type="text" id="nombre"><br>
+    ¿Asistirá a la fiesta? 
+    <select id="asistira">
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+    </select>
+    <button type="button" onclick="capturar()">Enviar</button>
+  </form>
+
+  <script>
+    function capturar() {
+      let nombre = document.getElementById("nombre").value;
+      let asistira = document.getElementById("asistira").value;
+      alert("Nombre: " + nombre + "\nAsistirá: " + asistira);
+    }
+  </script>
+</body>
+</html>

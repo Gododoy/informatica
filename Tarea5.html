@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Juego de Adivinanza</title>
+  <title>Calcular Promedio</title>
 </head>
 <body>
-  <button onclick="jugar()">Jugar</button>
+  <button onclick="calcularPromedio()">Calcular promedio</button>
 
   <script>
-    function jugar() {
-      const secreto = 7;
-      let intento = prompt("Adivina el número secreto:");
-      if (Number(intento) === secreto) {
-        alert("¡Acertaste!");
+    function calcularPromedio() {
+      let n1 = Number(prompt("Ingrese la primera nota:"));
+      let n2 = Number(prompt("Ingrese la segunda nota:"));
+      let n3 = Number(prompt("Ingrese la tercera nota:"));
+      let promedio = (n1 + n2 + n3) / 3;
+      if (promedio >= 6) {
+        alert("Aprobado con promedio: " + promedio.toFixed(2));
       } else {
-        alert("No acertaste. El número era " + secreto);
+        alert("Desaprobado con promedio: " + promedio.toFixed(2));
       }
     }
   </script>

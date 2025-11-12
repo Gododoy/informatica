@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bienvenida</title>
+</head>
+<body>
+  <form onsubmit="enviar(event)">
+    Nombre: <input type="text" id="nombre"><br>
+    Apellido: <input type="text" id="apellido"><br>
+    Curso: <input type="text" id="curso"><br>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    function enviar(e) {
+      e.preventDefault();
+      let nombre = document.getElementById("nombre").value;
+      let apellido = document.getElementById("apellido").value;
+      let curso = document.getElementById("curso").value;
+      let nuevaVentana = window.open("", "_blank");
+      nuevaVentana.document.write("<h1>Bienvenido " + nombre + " " + apellido + " del curso " + curso + "!</h1>");
+    }
+  </script>
+</body>
+</html>
