@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador</title>
+</head>
+<body>
+  <p id="contador">10</p>
+  <button onclick="disminuir()">Disminuir</button>
+
+  <script>
+    let contador = 10;
+    function disminuir() {
+      contador--;
+      document.getElementById("contador").textContent = contador;
+    }
+  </script>
+</body>
+</html>

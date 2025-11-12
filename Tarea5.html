@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Juego de Adivinanza</title>
+</head>
+<body>
+  <button onclick="jugar()">Jugar</button>
+
+  <script>
+    function jugar() {
+      const secreto = 7;
+      let intento = prompt("Adivina el número secreto:");
+      if (Number(intento) === secreto) {
+        alert("¡Acertaste!");
+      } else {
+        alert("No acertaste. El número era " + secreto);
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,27 +1,18 @@
+<!DOCTYPE html>
 <html>
-<h2>Ejercicio 1: Confirmar asistencia a la fiesta</h2>
-<form id="asistenciaForm">
-  <label for="nombre1">Nombre:</label>
-  <input type="text" id="nombre1" required>
+<head>
+  <title>Cambiar Colores</title>
+</head>
+<body>
+  <button onclick="cambiarColor('red','white')">Rojo</button>
+  <button onclick="cambiarColor('green','black')">Verde</button>
+  <button onclick="cambiarColor('blue','yellow')">Azul</button>
 
-  <p>¿Asistirás a la fiesta?</p>
-  <input type="radio" name="asistencia" value="si" required> Sí
-  <input type="radio" name="asistencia" value="no"> No
-  <br><br>
-  <button type="submit">Confirmar</button>
-</form>
-
-<p id="mensajeAsistencia"></p>
-
-<script>
-  document.getElementById("asistenciaForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const nombre = document.getElementById("nombre1").value;
-    const asistencia = document.querySelector('input[name="asistencia"]:checked').value;
-    const mensaje = asistencia === "si" 
-      ? `¡Gracias por confirmar, ${nombre}! Nos vemos en la fiesta.` 
-      : `¡Qué pena, ${nombre}! Te vamos a extrañar.`;
-    document.getElementById("mensajeAsistencia").textContent = mensaje;
-  });
-</script>
+  <script>
+    function cambiarColor(fondo, texto) {
+      document.body.style.backgroundColor = fondo;
+      document.body.style.color = texto;
+    }
+  </script>
+</body>
 </html>
